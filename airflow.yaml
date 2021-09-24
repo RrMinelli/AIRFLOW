@@ -1187,13 +1187,14 @@ dags:
     # subpath within the repo where dags are located
     # should be "" if dags are at repo root
     # subPath: "tests/dags"
-    #subPath: "Dags"
+    subPath: "dags"
     # if your repo needs a user name password
     # you can load them to a k8s secret like the one below
     #   ---
     #   apiVersion: v1
     #   kind: Secret
     #   metadata:
+
     #     name: git-credentials
     #   data:
     #     GIT_SYNC_USERNAME: <base64_encoded_git_username>
