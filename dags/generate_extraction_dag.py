@@ -7,7 +7,6 @@ from airflow.operators.python_operator import PythonOperator
 from airflow.utils.dates import days_ago
 from datetime import timedelta
 import pymongo
-import json
 import pandas as pd
 
 def create_dag(dag_id,
@@ -17,8 +16,7 @@ def create_dag(dag_id,
     default_args = {
         'owner': 'iron',
         'depends_on_past': False,
-        'start_date': airflow.utils.dates.days_ago(1),
-        'on_failure_callback': SlackAlert().task_fail_slack_alert
+        'start_date': airflow.utils.dates.days_ago(1)
     }
 
     # dag parameters
