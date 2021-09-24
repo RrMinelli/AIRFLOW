@@ -16,7 +16,7 @@ def create_dag(dag_id,
     default_args = {
         'owner': 'iron',
         'depends_on_past': False,
-        'start_date': airflow.utils.dates.days_ago(1)
+        'start_date': airflow.utils.dates.days_ago(2)
     }
 
     # dag parameters
