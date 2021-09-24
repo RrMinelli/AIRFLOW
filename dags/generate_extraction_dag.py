@@ -29,7 +29,7 @@ def create_dag(dag_id,
     )
 
     def test_iron():
-        mongo = MongoHook(conn_id=iron_analytics_db)
+        mongo = MongoHook(conn_id='')
         db = mongo.analytics_db
         for x in db["_user"].find():
             df = pd.json_normalize(x)
