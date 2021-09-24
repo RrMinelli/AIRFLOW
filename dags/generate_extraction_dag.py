@@ -6,7 +6,6 @@ from airflow.operators.python import PythonOperator, PythonVirtualenvOperator
 from airflow.operators.python_operator import PythonOperator
 from airflow.utils.dates import days_ago
 from datetime import timedelta
-from slack_alert import SlackAlert
 import pymongo
 import json
 import pandas as pd
@@ -48,5 +47,5 @@ def create_dag(dag_id,
     )
 
     query_mongo_task
-    
+
     return dag
